@@ -31,9 +31,9 @@ app.get("/", (req, res) => {
   res.send("API IS RUNNING");
 });
 
-app.use("/api", product);
-app.use("/api", user);
-app.use("/api", order);
+app.use("/api/products", product);
+app.use("/api/users", user);
+app.use("/api/orders", order);
 
 app.use(errorMiddleware);
 
