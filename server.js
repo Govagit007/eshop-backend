@@ -27,7 +27,11 @@ connectDB();
 
 app.options("/*", (req, res) => {
   res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
-  res.header("Access-Control-Allow-Headers", "*");
+  res.header(
+    "Access-Control-Allow-Origin",
+    "https://meek-gaufre-5e445c.netlify.app"
+  );
+
   res.header("Access-Control-Allow-Credentials", true);
   res.status(200).send();
 });
